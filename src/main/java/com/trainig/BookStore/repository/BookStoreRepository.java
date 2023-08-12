@@ -2,11 +2,14 @@ package com.trainig.BookStore.repository;
 
 import com.trainig.BookStore.entity.Book;
 import com.trainig.BookStore.exception.BookNotFoundException;
+import org.springframework.stereotype.Repository;
 
 import javax.swing.text.html.Option;
 import java.util.ArrayList;
 import java.util.List;
 
+
+@Repository
 public class BookStoreRepository {
 
     private  final List<Book> bookList = new ArrayList<>( );

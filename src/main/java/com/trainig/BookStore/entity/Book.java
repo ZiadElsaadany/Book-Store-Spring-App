@@ -1,8 +1,10 @@
 package com.trainig.BookStore.entity;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 
 @Data
+@AllArgsConstructor
 /**
  *
  * @Getter
