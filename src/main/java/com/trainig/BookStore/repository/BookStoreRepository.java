@@ -27,6 +27,16 @@ public class BookStoreRepository {
 
     }
 
+    public  Book addBook(Book  book ) {
+        // add method  -->   true and false
+       return  this.bookList.add(book)?   book :null;
+    }
+
+
+    public  boolean deleteBookById( Integer id   )  throws    BookNotFoundException {
+     Book book =   getBookByIdV2(id);
+   return   this.bookList.remove(book);
+    }
 
 
 }
