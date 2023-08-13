@@ -25,7 +25,6 @@ public class BookStoreApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 		IntStream.range(1,1000).mapToObj(x->new Book("","","",x,Float.valueOf(20))).forEach( this.bookService::addBook);
-		System.out.println(this.bookService.getBookByIdV2(20));
 
 	}
 }

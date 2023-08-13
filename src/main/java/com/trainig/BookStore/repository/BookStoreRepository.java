@@ -34,11 +34,23 @@ public class BookStoreRepository {
         // add method  -->   true and false
        return  this.bookList.add(book)?   book :null;
     }
+    public  Book updateBook(Book  book  , Integer id) throws  BookNotFoundException{
+        // add method  -->   true and false
+
+Book  book2= getBookByIdV2(id) ;
+this.bookList.remove(book2);
+return  this.addBook(book) ;
+
+    }
 
 
     public  boolean deleteBookById( Integer id   )  throws    BookNotFoundException {
      Book book =   getBookByIdV2(id);
    return   this.bookList.remove(book);
+    }
+    public  List<Book> getAllBooks( ) {
+
+   return   this.bookList;
     }
 
 
